@@ -352,7 +352,12 @@ export default function App() {
   }, [])
   const downloadCV = () => {
     if (profile.cv) {
-      window.open(profile.cv, "_blank", "noopener,noreferrer")
+      const link = document.createElement("a")
+      link.href = profile.cv
+      link.download = "Janardhana-Abby-CV.pdf"
+      document.body.appendChild(link)
+      link.click()
+      link.remove()
     } else {
       setInfo("cv")
     }
@@ -1077,4 +1082,5 @@ export default function App() {
     </div>
   )
 }
+
 
