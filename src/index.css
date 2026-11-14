@@ -3,7 +3,7 @@
 @import "./styles/theme.css";
 
 @layer base {
-  html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+  html { scroll-behavior: smooth; scroll-padding-top: 140px; }
   body { font-family: var(--font-sans); }
   button, a { -webkit-tap-highlight-color: transparent; }
   button:not(:disabled) { cursor: pointer; }

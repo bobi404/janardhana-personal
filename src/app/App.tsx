@@ -456,6 +456,21 @@ export default function App() {
       </header>
 
       <main className="mx-auto max-w-[1120px] border-x border-border">
+        <nav className="sticky top-[68px] z-20 flex flex-wrap items-center gap-5 border-b border-border bg-background/95 px-6 py-3.5 text-[11px] text-muted-foreground backdrop-blur-md sm:gap-7 sm:px-10">
+          <span className="mr-auto hidden items-center gap-2 font-mono text-[9px] uppercase tracking-[0.08em] sm:flex">
+            <span className="green-status-dot size-1.5 rounded-full bg-green-500" /> Open to
+            internships
+          </span>
+          {["About", "Projects", "Skills", "Education"].map((item) => (
+            <a
+              key={item}
+              href={`#${item.toLowerCase()}`}
+              className="transition hover:text-foreground"
+            >
+              {item}
+            </a>
+          ))}
+        </nav>
         <section
           id="home"
           className="relative overflow-hidden border-b border-border bg-background/85"
@@ -472,22 +487,7 @@ export default function App() {
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 opacity-40 [background-image:linear-gradient(to_right,var(--grid)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid)_1px,transparent_1px)] [background-size:8px_8px]"
           />
-          <nav className="relative flex flex-wrap items-center gap-5 px-6 pt-6 text-[11px] text-muted-foreground sm:gap-7 sm:px-10">
-            <span className="mr-auto hidden items-center gap-2 font-mono text-[9px] uppercase tracking-[0.08em] sm:flex">
-              <span className="green-status-dot size-1.5 rounded-full bg-green-500" /> Open to
-              internships
-            </span>
-            {["About", "Projects", "Skills", "Education"].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="transition hover:text-foreground"
-              >
-                {item}
-              </a>
-            ))}
-          </nav>
-          <div className="relative px-6 pb-11 pt-28 sm:px-10 sm:pb-12 sm:pt-36 lg:pt-40">
+          <div className="relative px-6 pb-11 pt-36 sm:px-10 sm:pb-12 sm:pt-44 lg:pt-48">
             <p className="mb-5 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.12em]">
               <Cloud size={15} strokeWidth={1.4} /> Aspiring Cloud Computing Student
             </p>
